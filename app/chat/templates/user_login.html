@@ -1,0 +1,93 @@
+{% extends 'base.html' %} {% block title %}Welcome{% endblock %} {% block
+    content %}
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Theme toggle logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleThemeButton = document.getElementById('toggle-theme');
+            const root = document.documentElement;
+
+            // Load saved theme or default to dark
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            root.setAttribute('data-theme', savedTheme);
+
+            // Update button text based on the current theme
+            toggleThemeButton.textContent = savedTheme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode';
+
+            // Toggle theme on button click
+            toggleThemeButton.addEventListener('click', () => {
+                const currentTheme = root.getAttribute('data-theme');
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                root.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+
+                toggleThemeButton.textContent = newTheme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode';
+            });
+        });
+    </script>
+</head>
+<body >
+    <div class="absolute top-4 right-4">
+        <button 
+            id="toggle-theme" 
+            class="px-4 py-2 rounded-lg shadow-md focus:outline-none">
+            Switch to Light Mode
+        </button>
+    </div>
+    <div class="flex flex-col items-center justify-center">
+        {% if error %}
+        <div class="bg-red-100 mb-4 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+            <strong class="font-bold">Error!</strong>
+            <span class="block sm:inline">{{ error }}</span>
+        </div>
+        {% endif %}
+        <div class="shadow-lg w-screen bg-[#202123] shadow-lg border rounded-lg p-8 w-full max-w-sm">
+            <h2 class="text-2xl font-bold text-center mb-6">Login</h2>
+            <form action="/login" method="POST" class="space-y-4">
+                <div>
+                    <label for="username" class="block bg-[#202123] text-sm font-medium">Username</label>
+                    <input 
+                        type="text" 
+                        id="username" 
+                        name="username" 
+                        required 
+                        autocapitalize="none"
+                        class="mt-1 w-full px-4 py-2 border bg-gray-500  rounded-lg shadow-sm focus:ring focus:ring-indigo-200 focus: -indigo-500">
+                </div>
+                <div>
+                    <label for="password" class="block bg-[#202123] text-sm font-medium">Password</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        required 
+                        class="mt-1 w-full px-4 py-2 border bg-gray-500 rounded-lg shadow-sm focus:ring focus:ring-indigo-200 focus:border-indigo-500">
+                </div>
+                <button type="submit" 
+                    class="w-full py-2 rounded-lg shadow-md hover:opacity-90 border focus:outline-none focus:ring focus:ring-indigo-300">
+                    Login
+                </button>
+            </form>
+            <p class="text-sm text-center mt-4">
+                Don't have an account? 
+                <a href="/register" class="text-indigo-500 hover:underline">Register</a>
+            </p>
+            <!-- or login as admin -->
+            <p class="text-sm text-center my-3"> Or </p>
+                
+            <p class="text-sm text-center">
+                Login as admin? 
+                <a href="/admin_login" class="text-indigo-500 hover:underline">Admin Login</a>
+            </p>
+        </div>
+    </div>  
+</body>
+</html>
+
+{% endblock %}

@@ -1,0 +1,131 @@
+{
+    "0ea9d1b8-d550-4f2d-8261-7bc7653805aa": {
+        "messages": [
+            {
+                "sender": "user",
+                "text": "Fg"
+            }
+        ],
+        "active": true,
+        "timestamp": "2025-01-28T11:37:57.057014"
+    },
+    "7653531f-d96d-4753-8bc9-ea4a2bc4e2dc": {
+        "messages": [
+            {
+                "sender": "user",
+                "text": "hello ther what up with you"
+            },
+            {
+                "sender": "user",
+                "image": "/static/uploads/soda.jpg",
+                "text": ""
+            },
+            {
+                "sender": "user",
+                "text": "What do you think abou the cook can i get i delivered to me"
+            },
+            {
+                "sender": "admin",
+                "text": "I dont k=now what you want"
+            },
+            {
+                "sender": "admin",
+                "text": "[payment_url]url:https://buy.stripe.com/test_6oE16GgTl5wy83CdSaamount:100.0$"
+            },
+            {
+                "sender": "admin",
+                "text": "[payment_url]url:https://buy.stripe.com/test_00g2aK32v1gi2Ji29tamount:100.0$"
+            },
+            {
+                "sender": "user",
+                "text": "what"
+            },
+            {
+                "sender": "user",
+                "text": "what do you think we can have for supper"
+            },
+            {
+                "sender": "admin",
+                "image": "/static/uploads/pepsi.png",
+                "text": ""
+            },
+            {
+                "sender": "admin",
+                "text": "We only have pepsi at $ 1.25"
+            },
+            {
+                "sender": "user",
+                "text": "no"
+            },
+            {
+                "sender": "user",
+                "text": "i dont need pepso"
+            }
+        ],
+        "active": true,
+        "timestamp": "2025-01-28T11:38:50.877454"
+    },
+    "4466f60e-9892-4c8d-a977-56b1a95bddda": {
+        "messages": [
+            {
+                "sender": "user",
+                "text": "hello sir"
+            },
+            {
+                "sender": "admin",
+                "text": "hello to you 2"
+            },
+            {
+                "sender": "admin",
+                "image": "/static/uploads/image-removebg-preview_8.png",
+                "text": ""
+            },
+            {
+                "sender": "admin",
+                "text": "[payment_url]url:https://buy.stripe.com/test_5kA7v45aD2km4Rq29zamount:2.0$"
+            }
+        ],
+        "active": true,
+        "timestamp": "2025-02-01T19:32:33.463766"
+    },
+    "146aa38a-64ea-4f08-ae31-0c9e87765079": {
+        "messages": [],
+        "active": false,
+        "timestamp": "2025-02-01T21:14:18.305510"
+    },
+    "4d861d34-b536-4dcc-8d58-b7b2a97426a0": {
+        "messages": [],
+        "active": false,
+        "timestamp": "2025-02-01T21:18:17.616997"
+    },
+    "2b94af8c-3537-4512-bc74-42a65bcbaa88": {
+        "messages": [],
+        "active": false,
+        "timestamp": "2025-02-01T21:25:12.977029"
+    },
+    "5ad8e078-04de-4cb4-b527-c963094516a9": {
+        "messages": [
+            {
+                "sender": "user",
+                "text": "hello"
+            }
+        ],
+        "active": true,
+        "timestamp": "2025-02-01T21:48:56.433936"
+    },
+    "e8e282bc-60ad-4d7f-acb7-55de14559cf9": {
+        "messages": [
+            {
+                "sender": "user",
+                "text": "hello"
+            }
+        ],
+        "active": true,
+        "timestamp": "2025-02-02T00:26:40.981184"
+    },
+    "c8d65a17-9d1d-4b5e-a60d-620567c75ffe": {
+        "messages": [],
+        "active": false,
+        "timestamp": "2025-02-02T10:29:03.229177"
+    }
+}

@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar Toggle Button for Mobile -->
+        <button class="btn btn-dark m-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#chatSidebar">
+            ☰ Chats
+        </button>
+
+        <!-- Sidebar (Collapsible on Mobile) -->
+        <div class="offcanvas offcanvas-start d-md-block" tabindex="-1" id="chatSidebar" style="width: 300px; background-color: #2f2f2f; color: white;">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title">Previous Chats</h5>
+                <button type="button" class="btn-close text-reset d-md-none" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="list-group" style="max-height: 500px; overflow-y: auto;">
+                    {% if user.chat_ids %}
+                        {% for x in user.chat_ids %}
+                            <li class="list-group-item bg-dark text-white">
+                                <a href="chat/{{ x }}" class="text-white text-decoration-none">Chat ID: {{ x }}</a>
+                            </li>
+                        {% endfor %}
+                    {% else %}
+                        <li class="list-group-item bg-dark text-white border-0">No previous chats.</li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="col-md-9 mx-auto text-center">
+            <h1>Welcome to the AI Shop</h1>
+            <p>Start chatting with just a click!</p>
+            <form action="/" method="post" class="d-inline">
+                <button type="submit" class="btn start-chat-btn">Start Chatting</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Custom CSS for Mobile Button Styling -->
+<style>
+    .start-chat-btn {
+        background-color: #28a745; /* Default Green */
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 18px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .start-chat-btn:hover {
+        background-color: #218838;
+    }
+
+    /* Change button color for mobile screens */
+    @media (max-width: 768px) {
+        .start-chat-btn {
+            background-color: #ff5733; /* Orange for mobile */
+        }
+
+        .start-chat-btn:hover {
+            background-color: #e74c3c; /* Darker orange on hover */
+        }
+    }
+</style>
+{% endblock %}

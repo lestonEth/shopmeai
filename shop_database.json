@@ -1,0 +1,30 @@
+{
+    "users": {
+        "1141b943-f842-45f4-85fe-5c0f9df29d4c": {
+            "username": "jim",
+            "password": "scrypt:32768:8:1$5kvBcazu16iLufUQ$d58b0274a7451504c7a4a6fd913e71d8e9b5a227ec4c990de6b4b397d8d446ebbc9da5d7573803953d491dcfdc24cde1670cad23d49b0951ab67a05b98b48b1d",
+            "chat_ids": [
+                "0ea9d1b8-d550-4f2d-8261-7bc7653805aa",
+                "7653531f-d96d-4753-8bc9-ea4a2bc4e2dc",
+                "146aa38a-64ea-4f08-ae31-0c9e87765079",
+                "4d861d34-b536-4dcc-8d58-b7b2a97426a0",
+                "2b94af8c-3537-4512-bc74-42a65bcbaa88",
+                "5ad8e078-04de-4cb4-b527-c963094516a9",
+                "e8e282bc-60ad-4d7f-acb7-55de14559cf9",
+                "c8d65a17-9d1d-4b5e-a60d-620567c75ffe"
+            ]
+        },
+        "d4e64205-87a9-4fc7-8d02-6f15ced255f4": {
+            "username": "user1",
+            "password": "scrypt:32768:8:1$AEIM20Ah6xDbkqHl$2ff920a7a0d491144ba9bee4203de24926afee580e1ea31cc142fdfcbb4afe119000592a4103308578088b1c860daf2052b1c02285e66569a7991e7ee4a7761a",
+            "chat_ids": []
+        },
+        "b2a0f6cf-e45d-41ec-a189-00877e3ba30b": {
+            "username": "shavi",
+            "password": "scrypt:32768:8:1$OMkPwINcsYrFEnad$03cf961bceb16007039bfe8f05acc3d68fa41f78dbf0ec1132ff981fb84c8a7cc3c331ff12578701cc29881f1bc60419b5dfacca83938cfd7614e992165941df",
+            "chat_ids": [
+                "4466f60e-9892-4c8d-a977-56b1a95bddda"
+            ]
+        }
+    }
+}

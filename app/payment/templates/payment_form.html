@@ -1,0 +1,82 @@
+{% extends "layout.html" %} {% block content %}
+<h2>Payment Form</h2>
+<link href="/static/styles/styles.css" rel="stylesheet" />
+<form id="payment-form">
+  <div class="mb-3">
+    <label for="name" class="form-label">First Name</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      required
+      class="form-control"
+      required
+    />
+  </div>
+  <div class="mb-3">
+    <label for="surname" class="form-label">Last Name</label>
+    <input
+      type="text"
+      id="surname"
+      name="surname"
+      class="form-control"
+      required
+    />
+  </div>
+  <div class="mb-3">
+    <label for="address" class="form-label">Address</label>
+    <input
+      type="text"
+      id="address"
+      name="address"
+      class="form-control"
+      required
+    />
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" id="email" name="email" class="form-control" required />
+  </div>
+  <div class="mb-3">
+    <label for="phone" class="form-label">Phone</label>
+    <input type="text" id="phone" name="phone" class="form-control" required />
+  </div>
+  <button type="submit">Proceed to Payment</button>
+</form>
+
+<script>
+  // If the payment link URL was passed in as a query parameter, use it
+  const paymentLinkUrl = "{{ payment_link_url }}";
+
+  // Function to validate if all required fields are filled
+  function validateForm() {
+    const name = document.getElementById("name").value;
+    const surname = document.getElementById("surname").value;
+    const address = document.getElementById("address").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+
+    // Check if all fields are filled out
+    if (!name || !surname || !address || !email || !phone) {
+      alert("Please fill out all the required fields.");
+      return false; // Prevent the redirection
+    }
+    return true; // All fields are valid
+  }
+
+  // Attach event listener to the submit button
+  document
+    .querySelector('button[type="submit"]')
+    .addEventListener("click", function (event) {
+      // Prevent the default form submission behavior
+      event.preventDefault();
+
+      // Validate form before proceeding
+      if (validateForm()) {
+        // Redirect to the payment link if all fields are valid
+        window.location.href = paymentLinkUrl;
+      }
+    });
+</script>
+
+{% endblock %}

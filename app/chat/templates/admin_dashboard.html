@@ -1,0 +1,41 @@
+{% extends 'base.html' %} {% block title %}Admin Dashboard{% endblock %} {%
+block content %}
+<div class="container">
+  
+<h2>Admin Dashboard</h2>
+<div class="row">
+  {% for chat in chats %}
+  <div class="col-md-4">
+    <div class="card mb-3" style="background-color: #2f2f2f; color: white">
+      <div class="card-body">
+        <h5 class="card-title">Chat ID: {{ chat.chat_id }}</h5>
+        <p class="card-text">{{ chat.first_message }}</p>
+        <a href="/chat/{{ chat.chat_id }}" class="btn btn-dark-green"
+          >Open Chat</a
+        >
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+</div>
+<script>
+  const form = document.getElementById("create-product-form");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const formData = new FormData(form);
+    fetch("/payment/create-product", {
+      method: "POST",
+      body: formData,
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        alert("Product created successfully");
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  });
+</script>
+{% endblock %}

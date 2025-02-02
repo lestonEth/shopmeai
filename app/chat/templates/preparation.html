@@ -1,0 +1,55 @@
+{% block content %}
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="createProductModal"
+  tabindex="-1"
+  aria-labelledby="createProductModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="createProductModalLabel">Create Product</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form
+          id="create-product-form"
+          method="POST"
+          action="/payment/create-product"
+        >
+          <div class="mb-3">
+            <label for="product_name" class="form-label">Product Name</label>
+            <input
+              type="text"
+              id="product_name"
+              name="product_name"
+              class="form-control"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="price_amount" class="form-label">Price (in USD)</label>
+            <input
+              type="number"
+              id="price_amount"
+              name="price_amount"
+              class="form-control"
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-primary">Create Product</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

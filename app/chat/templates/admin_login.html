@@ -1,0 +1,27 @@
+{% extends 'base.html' %} {% block title %}Admin Login{% endblock %} {% block
+content %}
+<div class="container px-5 d-flex flex-column align-items-center">
+  <form method="POST" style="min-width: 400px; border: 1px solid gray; padding: 20px 20px; border-radius: 8px;">
+  <h2 class="text-center">Admin Login</h2>
+  <div class="mb-3">
+    <label for="username" class="form-label">Username</label>
+    <input type="text" class="form-control py-3" id="username" name="username" />
+  </div>
+  <div class="mb-3">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" class="form-control py-3" id="password" name="password" />
+  </div>
+  <button type="submit" class="btn btn-primary mt-3 py-3" style="width: 100%">Login</button>
+  {% if error %}
+  <div class="alert alert-danger mt-3">{{ error }}</div>
+  {% endif %}
+
+  <!-- or login as user -->
+  <p class="text-center my-3"> Or </p>
+  <p class="text-center">
+    Login as user?
+    <a href="/login" class="text-indigo-500">User Login</a>
+  </p>
+</form>
+</div>
+{% endblock %}
